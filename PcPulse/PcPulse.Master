@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PcPulse.Master.cs" Inherits="PcPulse.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>PcPulse- Your Online Ecommerce Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="Content/font-awesome.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Css/site.css" rel="stylesheet" />
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="form-horizontal">
+
+        <header class="mb-5">
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class='logo'>
+                            <img class='logo_image' alt="Image of PcPulse Logo" src='Images/logo.png' />
+                        </div>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <!-- Customer Navigation -->
+                        <ul id="CustomerNavigation" runat="server" visible="false" class="nav navbar-nav navbar-right">
+                            <li><a href="/Homepage">Homepage</a></li>
+                            <li><a href="/Products">Products</a></li>
+                            <li><a href="/Cart">Cart</a></li>
+                            <li><a href="/Checkout">Checkout</a></li>
+                            <li>
+                                <asp:LinkButton ID="UsernameLabel" runat="server" Visible="false">
+                                </asp:LinkButton>
+                            </li>
+                            <li>
+                                <asp:LinkButton ID="LogoutButton" runat="server" OnClick="LogoutButton_Click" Visible="false">
+                                     Logout
+                                </asp:LinkButton>
+                            </li>
+                            <li>
+                                <a id="LoginLink" runat="server" href="Login" visible="false">Login
+                                </a>
+                            </li>
+                        </ul>
+
+                        <ul id="AdminNavigation" runat="server" visible="false" class="nav navbar-nav navbar-right">
+                            <li><a href="/Homepage">Homepage</a></li>
+                            <li><a href="/Categories">Categories</a></li>
+                            <li><a href="/ProductsAdmin">Products</a></li>
+                            <li><a href="/UsersAdmin">Users</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <asp:ContentPlaceHolder ID="main" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <footer>
+            <div class="footer_content form-group">
+                <div class="col-xs-12 col-sm-12 col-lg-12">
+                    <h4>&copy; 2023 PcPulse. All Rights Reserved!</h4>
+                    <hr />
+                    <div class="col-sm-4">
+                        <p><strong>Group Name:</strong> SoftByte</p>
+                        <p><strong>Project Name:</strong> Pcpulse</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p><strong>Group Member:</strong> Shree Dhar Acharya | 8899288</p>
+                        <p><strong>Group Member:</strong> Prashant Sahu | 8877584</p>
+                    </div>
+
+                    <div class="col-sm-4">
+
+                        <p><strong>Group Member:</strong> Abhijit Singh | 488865227</p>
+                        <p><strong>Group Member:</strong> Karamjot Singh | 8869324</p>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </form>
+</body>
+</html>
